@@ -156,6 +156,7 @@ async function fetchSearchWeatherInfo(city) {
     if (!data.sys) {
       throw data;
     }
+    apiErrorContainer.classList.remove("active");
     loadingScreen.classList.remove("active");
     userInfoContainer.classList.add("active");
     renderWeatherInfo(data);
